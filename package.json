@@ -1,0 +1,19 @@
+{
+  "name": "express-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2"
+  }
+}
