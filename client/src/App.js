@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import FootballField from './containers/FootballField/FootballField';
 
-import './App.css';
+import classes from './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={classes.App}>
         <FootballField />
       </div>
     );

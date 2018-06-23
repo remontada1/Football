@@ -1,0 +1,7 @@
+.FootballField {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url('../../assets/images/FootbalField.jpg');
+    background-size: cover;
+}

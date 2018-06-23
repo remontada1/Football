@@ -1,0 +1,13 @@
+.Card {
+    width: 300px;
+    height: 350px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: red;
+}
+
+.Card img {
+    width: 300px;
+    height: 350px;
+}
