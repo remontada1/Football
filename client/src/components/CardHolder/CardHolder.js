@@ -1,20 +1,26 @@
 import React from 'react';
-import Card from './Card/Card'
-
+import Cards from './Cards/Cards'
 import classes from './CardHolder.css'
 
 
 
 const cardHolder = (props) => {
     
-        return(
+    
+    let newCard = Object.keys(props.PlayerName)
+        .map((el, i) => {
+                
+            return (
+                <Cards key={props.PlayerName[i]}
+                    imageSource={props.imgSrc[i]} 
+                    imageName={props.PlayerName[i]} />
+                )
+            })
+    
+    return (    
         <div className={classes.CardHolder}>
-                <Card imageName={props.PlayerName} 
-                        imageSource={props.imgSrc }
-                        removeImage={props.deleteImage}/>
+            {newCard}
         </div>
-        )
-
+    )        
 }
-
 export default cardHolder;

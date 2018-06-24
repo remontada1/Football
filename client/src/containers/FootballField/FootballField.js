@@ -12,7 +12,7 @@ class FootballField extends Component {
         players: [
             { name: 'Messi', sourceImage: Messi },
             { name: 'Ronaldo', sourceImage: Ronaldo },
-            { name: 'Hazard', sourceImage: Hazard }
+            { name: 'Hazard', sourceImage: Hazard },
         ]
     }
 
@@ -30,12 +30,16 @@ class FootballField extends Component {
     }
 
     render(){
+        console.log('FootballFields: ', this.state.players.map(el => el.name))
         return(
             <div className={classes.FootballField}>
                 <Navigation />
-                <CardHolder imgSrc={this.state.players.map(el => el.sourceImage)} 
-                    PlayerName={this.state.players.map(el => el.name)} 
-                            deleteImage={(el) => this.deleteHandler(el)}/>
+
+                <CardHolder 
+                    PlayerName={this.state.players.map(el => el.name)}
+                    imgSrc={this.state.players.map(el => el.sourceImage)} />
+                    {/* removeImage={props.deleteImage} /> */}
+
             </div>
         )
     }

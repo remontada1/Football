@@ -1,4 +1,4 @@
-.Card {
+.Cards {
     width: 300px;
     height: 350px;
     margin: 20px 0;
@@ -7,7 +7,7 @@
     color: red;
 }
 
-.Card img {
+.Cards img {
     width: 300px;
     height: 350px;
 }
