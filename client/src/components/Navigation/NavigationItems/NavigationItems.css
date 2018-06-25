@@ -1,0 +1,13 @@
+.NavigationItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    height: auto;
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    list-style: none;
+    background-color: transparent;
+}
