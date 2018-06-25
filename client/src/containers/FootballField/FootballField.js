@@ -17,28 +17,23 @@ class FootballField extends Component {
     }
 
     
-    deleteHandler(e) {
-        // console.log(this.state.players)
-        //  var array = this.state.players
-        //      .map(igKey => {
-        //          return igKey.name
-        //     })
-        // var index = array.indexOf(e.target.alt);
-        // // console.log(array, this.state.players, index)
-        // array.splice(index, 1);
-        // this.setState({ players: array });
+    deleteHandler = (e) => {
+        const index = e.target.alt || e.target.childNodes.item(0).nextSibling.data;        
+        this.setState({
+            players: this.state.players.filter(function (person) {
+                return person.name !== index
+            })
+        });
     }
 
     render(){
-        console.log('FootballFields: ', this.state.players.map(el => el.name))
         return(
             <div className={classes.FootballField}>
                 <Navigation />
-
                 <CardHolder 
                     PlayerName={this.state.players.map(el => el.name)}
-                    imgSrc={this.state.players.map(el => el.sourceImage)} />
-                    {/* removeImage={props.deleteImage} /> */}
+                    imgSrc={this.state.players.map(el => el.sourceImage)}
+                    deletePlayer={(el) => this.deleteHandler(el)} />
 
             </div>
         )

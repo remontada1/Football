@@ -9,10 +9,10 @@ const cardHolder = (props) => {
     
     let newCard = Object.keys(props.PlayerName)
         .map((el, i) => {
-                
             return (
                 <Cards key={props.PlayerName[i]}
-                    imageSource={props.imgSrc[i]} 
+                    imageSource={props.imgSrc[i]}
+                    removeElement={props.deletePlayer} 
                     imageName={props.PlayerName[i]} />
                 )
             })

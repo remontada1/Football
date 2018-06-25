@@ -3,9 +3,9 @@ import classes from './Cards.css';
 
 
 const card = (props) => {
-    console.log('Cards: ', props.imageName)    
+    
 return (
-    <div className={classes.Cards}>
+    <div className={classes.Cards} onClick={props.removeElement}>
         <img src={props.imageSource} alt={props.imageName} />
         <h2> {props.imageName} </h2>
     </div>
